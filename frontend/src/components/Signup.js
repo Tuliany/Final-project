@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { user,signup } from '../reducers/user'
-import '../Style/Signup.css'
+// import '../Style/Signup.css'
 
 export const Signup = () => {
   const history = useHistory ()

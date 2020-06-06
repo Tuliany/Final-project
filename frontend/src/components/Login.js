@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { user, login } from '../reducers/user'
-import '../Style/Login.css'
+// import '../Style/Login.css'
 
 export const Login = () => {
    const history = useHistory()
    const dispatch = useDispatch()
-   const accessToken = useSelector((store) => store.user.login.acessToken)
+   const accessToken = useSelector((store) => store.user.login.accessToken)
    const errorMessage = useSelector((store) => store.user.login.errorMessage)
 
    const [name, setName] = useState('')
