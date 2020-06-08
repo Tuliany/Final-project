@@ -5,7 +5,7 @@ import crypto from 'crypto'
 import mongoose from 'mongoose'
 import bcrypt from 'bcrypt-nodejs'
 
-const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/authAPITuli"
+const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/finalproject"
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 mongoose.set('useCreateIndex', true);
@@ -27,6 +27,23 @@ const User = mongoose.model('User', {
   accessToken:{
     type: String,
     default: () => crypto.randomBytes(128).toString('hex')
+  }
+})
+
+const Thought = mongoose.model('Thought', {
+  message:  {
+    type: String,
+    required: true,
+    minlength: 5,
+    maxlength: 140
+  },
+  hearts: {
+    type: Number,
+    default: 0
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
   }
 })
 
@@ -85,6 +102,48 @@ try {
   res.status(404).json({ notFound: true })
 }
 })
+
+app.get('/feed', async (req, res) => {
+  const thoughts = await Thought.find().sort({createdAt: 'desc'}).limit(20).exec()
+  res.json(thoughts)
+})
+
+app.post('/feed', async (req, res) => {
+  const { message } = req.body
+  const thought = new Thought({message})
+   console.log(thought)
+   try {
+    const savedThought = await thought.save()
+    res.status(201).json(savedThought)
+    } catch (err) {
+    res.status(400).json({ message: 'Could not save post', error: err})
+  }
+})
+
+app.post('/feed/:thoughtId/like', async (req, res) => {
+  const {thoughtId} = req.params
+  const like = awaitpostt.findById(thoughtId)
+  
+  if(like) {
+    like.hearts += 1
+    like.save()
+    res.json(like)
+  } else {
+    res.status(404).json({message: 'Could not thought', error: err.errors})
+  }
+  })
+
+  app.get('/about', (req, res) => {
+    res.send('About us')
+  })
+
+  app.get('/events', (req, res) => {
+    res.send('Events ')
+  })
+
+  app.get('/contact', (req, res) => {
+    res.send('Contact us')
+  })
 
 // Start the server
 app.listen(port, () => {
