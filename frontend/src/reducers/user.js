@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-
 const initialState = {
   login: {
     accessToken: null,
@@ -40,7 +39,7 @@ export const user = createSlice({
 
 // THUNK 
 export const login = (name, password) => {
-  const LOGIN_URL ='http://localhost:8080/login'
+  const LOGIN_URL ='https://final-project-by-tuliany.herokuapp.com/login'
   return (dispatch, getState) => {
     fetch(`${LOGIN_URL}`, 
     {
@@ -66,7 +65,7 @@ export const login = (name, password) => {
 }
 
 export const signup = (name, email, password) =>{
-  const SIGNUP_URL ='http://localhost:8080/signup'
+  const SIGNUP_URL ='https://final-project-by-tuliany.herokuapp.com/signup'
   return (dispatch, getState) =>{
     fetch(`${SIGNUP_URL}`,
     {

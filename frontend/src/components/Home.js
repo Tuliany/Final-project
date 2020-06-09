@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
+// import Navbar from 'navbar-react'
 
 
 
@@ -7,6 +8,9 @@ export const Home = () => {
   const history = useHistory()
 
   return (
+
+ 
+
     <div>
       <section className="header">
         <h1>W Club Official 💎 </h1>
