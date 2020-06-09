@@ -1,0 +1,157 @@
+/* body {
+  background-size: cover;
+  opacity: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  color: rgb(245, 246, 247);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+position:relative;
+top:-20px;
+  letter-spacing: 2px;
+  font-size: 2.1em;
+/*     padding-top: -40px; */
+  /* text-shadow: 2px 1px 5px black;
+  
+
+} */
+
+.main {
+  background-image: url('../Style/WOB.jpg');
+  width: 90%;
+  height: 600px;
+  background-size: 100% 100%;
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 2px 10px 5px white;
+  animation: slideshow 35s infinite linear;
+
+}
+
+@keyframes slideshow {
+
+  0% 
+  {
+      background-image: url('../Style/Growth.jpg');   
+  }
+  10% {
+      background-image: url('../Style/Connection.jpg');
+  }
+  20% {
+      background-image: url('../Style/Visionaries.jpg');
+  }
+  30% {
+      background-image: url('../Style/Solidairity.jpg');
+  } 
+  40% {
+    background-image: url('../Style/Inspo.jpg');
+  }
+  50% {
+    background-image: url('../Style/Entrepreneurship.jpg');
+  }
+  60% {
+    background-image: url('../Style/Sisters.jpg');
+  } 
+  70% {
+  background-image: url('../Style/Goodtimes.jpg');
+  }
+  80% {
+  background-image: url('../Style/Contemplation.jpg');
+  }
+  100% {
+  background-image: url('../Style/WOB.jpg');
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+  from {
+      box-shadow: 1px 2px 10px 5px rgb(51, 49, 49)
+  }
+  to {
+      box-shadow: 2px 3px 11px 6px rgb(61, 60, 60)
+  }
+}
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-wrapper {
+  font-size: 40px;
+  color:#aaa;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider{
+  height: 50px;
+  padding-left:15px;
+  overflow: hidden;
+}
+.slider div {
+  color:#fff;
+  height: 50px;
+  margin-bottom: 50px;
+  padding: 2px 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.slider-text1 {
+  background: lightgreen;
+  animation: slide 5s linear infinite;
+}
+.slider-text2 {
+  background: skyblue;
+  /* animation: slide 5s linear infinite */
+}
+.slider-text3 {
+  background: lightcoral;
+  /* animation: slide 5s linear infinite */
+}
+.slider-text4 {
+  background: lightgreen;
+  /* animation: slide 5s linear infinite; */
+}
+.slider-text5 {
+  background: skyblue;
+  /* animation: slide 5s linear infinite */
+}
+.slider-text6 {
+  background: lightcoral;
+  /* animation: slide 5s linear infinite */
+}
+.slider-text7 {
+  background: lightgreen;
+  /* animation: slide 5s linear infinite; */
+}
+.slider-text8 {
+  background: skyblue;
+  /* animation: slide 5s linear infinite */
+}
+.slider-text9 {
+  background: lightcoral;
+  animation-fill-mode: forwards;
+
+  /* animation: slide 5s linear infinite */
+}
+@keyframes slide {
+  0% {margin-top:-400px;}
+  10% {margin-top:-400px;}
+  20% {margin-top:-400px;}
+  30% {margin-top:-300px;}
+  40% {margin-top:-300px;}
+  50% {margin-top:-300px;}
+  60% {margin-top:-200px;}
+  70% {margin-top:-200px;}
+  80% {margin-top:-200px;}
+  100% {margin-top:-200px;}
+  
+} 

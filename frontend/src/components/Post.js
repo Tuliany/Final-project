@@ -23,19 +23,21 @@ export const Post = props => {
     <form className='happy-message'>
       <h3>Intern feed</h3>
       <textarea
-        rows='3'
+        rows='10'
+        columns='600'
         value={message}
         onChange={event => setMessage(event.target.value)}
+        wrap
       ></textarea>
       <div className='footer'></div>
         <button
           type='submit'
           onClick={handleSubmit}
-          disabled={message.length < 5 || message.length > 140} // this will be interpreted as true or false
+          disabled={message.length < 5 || message.length > 500} // this will be interpreted as true or false
         >
           Post a thought
         </button>
-        <p>{message.length} / 140</p>
+        <p>{message.length} / 500</p>
     </form>
   )
 }
