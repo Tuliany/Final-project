@@ -33,11 +33,11 @@ top:-20px;
 
 }
 
-@keyframes slideshow {
 
+@keyframes slideshow {
   0% 
   {
-      background-image: url('../Style/Growth.jpg');   
+      background-image: url('../Style/Growth.jpg');
   }
   10% {
       background-image: url('../Style/Connection.jpg');
@@ -65,8 +65,6 @@ top:-20px;
   }
   100% {
   background-image: url('../Style/WOB.jpg');
-  animation-fill-mode: forwards;
-  animation-delay: 1s;
 }
   from {
       box-shadow: 1px 2px 10px 5px rgb(51, 49, 49)
@@ -75,83 +73,101 @@ top:-20px;
       box-shadow: 2px 3px 11px 6px rgb(61, 60, 60)
   }
 }
-.content {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.slider-wrapper {
-  font-size: 40px;
-  color:#aaa;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .slider{
-  height: 50px;
-  padding-left:15px;
+  width: 75%;
+  height: 27.5rem;
+  margin: 0 auto;
   overflow: hidden;
+  position: relative;
 }
-.slider div {
-  color:#fff;
-  height: 50px;
-  margin-bottom: 50px;
-  padding: 2px 15px;
-  text-align: center;
-  box-sizing: border-box;
+.slider-container {
+  width: 1000rem;
+  height: 30rem;
 }
+
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
 .slider-text1 {
-  background: lightgreen;
-  animation: slide 5s linear infinite;
+  font-size: 4.4rem;
+  position: absolute;
+  left: 2.5rem;
+  top: 5rem;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-duration: 5s;
+  color: white;
 }
+
 .slider-text2 {
-  background: skyblue;
-  /* animation: slide 5s linear infinite */
+  font-size: 3.4rem;
+  position: absolute;
+  top: 8.5rem;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-delay: 3s;
+  animation-duration: 6s;
+  color: white;
 }
+
 .slider-text3 {
-  background: lightcoral;
-  /* animation: slide 5s linear infinite */
+  font-size: 2rem;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-delay: 7.5s;
+  animation-duration: 6s;
+  color: white;
+  /* white-space: nowrap; */
 }
+
 .slider-text4 {
-  background: lightgreen;
-  /* animation: slide 5s linear infinite; */
+  font-size: 3.4rem;
+  position: absolute;
+  top: 10.5rem;
+  left: 10%;
+  opacity: 0;
+  color: white;
+  animation-name: fadeInOut;
+  animation-delay: 9s;
+  animation-duration: 9s;
 }
+
 .slider-text5 {
-  background: skyblue;
-  /* animation: slide 5s linear infinite */
+  font-size: 5rem;
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  opacity: 0;
+  color: white;
+  animation-name: fadeInOut;
+  animation-delay: 12s;
+  animation-duration: 9s;
 }
 .slider-text6 {
-  background: lightcoral;
-  /* animation: slide 5s linear infinite */
+  font-size: 5rem;
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  opacity: 0;
+  color: white;
+  animation-name: fadeInOut;
+  animation-delay: 14s;
+  animation-duration: 9s;
 }
-.slider-text7 {
-  background: lightgreen;
-  /* animation: slide 5s linear infinite; */
-}
-.slider-text8 {
-  background: skyblue;
-  /* animation: slide 5s linear infinite */
-}
-.slider-text9 {
-  background: lightcoral;
-  animation-fill-mode: forwards;
 
-  /* animation: slide 5s linear infinite */
-}
-@keyframes slide {
-  0% {margin-top:-400px;}
-  10% {margin-top:-400px;}
-  20% {margin-top:-400px;}
-  30% {margin-top:-300px;}
-  40% {margin-top:-300px;}
-  50% {margin-top:-300px;}
-  60% {margin-top:-200px;}
-  70% {margin-top:-200px;}
-  80% {margin-top:-200px;}
-  100% {margin-top:-200px;}
-  
-} 
