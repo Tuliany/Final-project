@@ -1,23 +1,3 @@
-/* body {
-  background-size: cover;
-  opacity: 0px;
-  height: 100%;
-  width: 100%;
-}
-
-h1 {
-  color: rgb(245, 246, 247);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-position:relative;
-top:-20px;
-  letter-spacing: 2px;
-  font-size: 2.1em;
-/*     padding-top: -40px; */
-  /* text-shadow: 2px 1px 5px black;
-  
-
-} */
 
 .main {
   background-image: url('../Style/WOB.jpg');
@@ -29,48 +9,77 @@ top:-20px;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 1px 2px 10px 5px white;
-  animation: slideshow 35s infinite linear;
+  animation: slideshow 34s ;
+  
 
 }
+
 
 
 @keyframes slideshow {
   0% 
   {
       background-image: url('../Style/Growth.jpg');
-  }
+      -webkit-backface-visibility: hidden;
+      /* transition: opacity 1s ease-in-out; */
+    }
   10% {
       background-image: url('../Style/Connection.jpg');
-  }
+      -webkit-backface-visibility: hidden;
+      /* transition: opacity 1s ease-in-out; */
+    }
   20% {
       background-image: url('../Style/Visionaries.jpg');
-  }
+      -webkit-backface-visibility: hidden;
+      /* transition: opacity 1s ease-in-out; */
+    }
   30% {
       background-image: url('../Style/Solidairity.jpg');
-  } 
-  40% {
+      -webkit-backface-visibility: hidden;
+      /* transition: opacity 1s ease-in-out; */
+    
+    } 
+  35% {
     background-image: url('../Style/Inspo.jpg');
+    -webkit-backface-visibility: hidden;
+    /* transition: opacity 1s ease-in-out; */
+  
   }
-  50% {
+  40% {
     background-image: url('../Style/Entrepreneurship.jpg');
+    -webkit-backface-visibility: hidden;
+    /* transition: opacity 0.5s ease-in-out; */
+  
   }
-  60% {
+
+  45% {
     background-image: url('../Style/Sisters.jpg');
+    -webkit-backface-visibility: hidden;
+    /* transition: opacity 0.6s ease-in-out; */
+    
   } 
-  70% {
-  background-image: url('../Style/Goodtimes.jpg');
-  }
-  80% {
+  
+  50% {
   background-image: url('../Style/Contemplation.jpg');
-  }
+  -webkit-backface-visibility: hidden;
+  /* transition: opacity 0.7s ease-in-out; */
+}
+  
   100% {
   background-image: url('../Style/WOB.jpg');
-}
+  -webkit-transition: margin-top 0.2s ease-out;
+  animation-fill-mode:forwards;
+  }
   from {
       box-shadow: 1px 2px 10px 5px rgb(51, 49, 49)
   }
   to {
       box-shadow: 2px 3px 11px 6px rgb(61, 60, 60)
+  }
+}
+@media screen and (max-width: 800px) {
+   .main {
+    display: none; /* The width is 100%, when the viewport is 800px or smaller */
   }
 }
 
@@ -104,70 +113,107 @@ top:-20px;
 .slider-text1 {
   font-size: 4.4rem;
   position: absolute;
-  left: 2.5rem;
-  top: 5rem;
+  left: 5%;
+  top: 10%;
   opacity: 0;
   animation-name: fadeInOut;
-  animation-duration: 5s;
+  animation-duration: 3s;
   color: white;
 }
 
 .slider-text2 {
   font-size: 3.4rem;
   position: absolute;
-  top: 8.5rem;
+  top: 20%;
+  left: 10%;
   opacity: 0;
   animation-name: fadeInOut;
   animation-delay: 3s;
-  animation-duration: 6s;
+  animation-duration: 3s;
   color: white;
 }
 
 .slider-text3 {
-  font-size: 2rem;
+  font-size: 4rem;
   position: absolute;
   left: 45%;
-  top: 45%;
+  top: 30%;
   opacity: 0;
   animation-name: fadeInOut;
-  animation-delay: 7.5s;
-  animation-duration: 6s;
+  animation-delay: 6s;
+  animation-duration: 3s;
   color: white;
   /* white-space: nowrap; */
 }
-
 .slider-text4 {
-  font-size: 3.4rem;
+  font-size: 4.4rem;
   position: absolute;
-  top: 10.5rem;
-  left: 10%;
+  left: 5%;
+  top: 10%;
   opacity: 0;
-  color: white;
   animation-name: fadeInOut;
   animation-delay: 9s;
-  animation-duration: 9s;
+  animation-duration: 3s;
+  color: white;
 }
 
 .slider-text5 {
-  font-size: 5rem;
+  font-size: 3.4rem;
   position: absolute;
-  left: 5%;
-  bottom: 25%;
+  top: 20%;
+  left: 10%;
   opacity: 0;
-  color: white;
   animation-name: fadeInOut;
   animation-delay: 12s;
-  animation-duration: 9s;
-}
-.slider-text6 {
-  font-size: 5rem;
-  position: absolute;
-  left: 5%;
-  bottom: 25%;
-  opacity: 0;
+  animation-duration: 3s;
   color: white;
-  animation-name: fadeInOut;
-  animation-delay: 14s;
-  animation-duration: 9s;
 }
 
+.slider-text6 {
+  font-size: 4rem;
+  position: absolute;
+  left: 45%;
+  top: 30%;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-delay: 15s;
+  animation-duration: 3s;
+  color: white;
+  /* white-space: nowrap; */
+}
+.slider-text7 {
+  font-size: 4.4rem;
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-delay: 18s;
+  animation-duration: 3s;
+  color: white;
+}
+
+.slider-text8 {
+  font-size: 3.4rem;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-delay: 21s;
+  animation-duration: 3s;
+  color: white;
+}
+
+.slider-text9 {
+  font-size: 4rem;
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  opacity: 0;
+  animation-name: fadeInOut;
+  animation-delay: 24s;
+  animation-duration: 8s;
+  color: white;
+  /* white-space: nowrap; */
+}

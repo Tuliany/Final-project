@@ -13,9 +13,11 @@ import { Secrets } from 'components/Secrets'
 import { About } from 'components/About'
 import { Post } from 'components/Post'
 import { Contact } from 'components/Contact'
-import { MessageList} from 'components/MessageList'
+// import { MessageList} from 'components/MessageList'
 import { Feed } from 'components/Feed'
 import { Landing } from 'components/Landing'
+import { Blog } from 'components/Blog'
+// import { Blog } from 'components/BlogWithReducer'
 
 import  {NavigationTool} from 'components/NavigationTool'
 
@@ -49,7 +51,8 @@ export const App = () => {
             <About />
           </Route>
           <Route path="/feed" exact>
-            <MessageList />
+            {/* <MessageList /> */}
+            <Blog />
           </Route>
           <Route path="/contact" exact>
             <Contact />
