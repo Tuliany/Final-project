@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from "react-redux";
 
  import { user } from './reducers/user.js'
- import { messages, message } from './reducers/messages.js'
  import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
 import { Home } from 'components/Home'
@@ -11,18 +10,16 @@ import { Signup } from 'components/Signup'
 import { Login } from 'components/Login'
 import { Secrets } from 'components/Secrets'
 import { About } from 'components/About'
-import { Post } from 'components/Post'
 import { Contact } from 'components/Contact'
-// import { MessageList} from 'components/MessageList'
-import { Feed } from 'components/Feed'
+import { BlogFeed } from 'components/BlogFeed'
+import { BlogArticle } from 'components/BlogArticle'
 import { Landing } from 'components/Landing'
-import { Blog } from 'components/Blog'
-// import { Blog } from 'components/BlogWithReducer'
+import { BlogPost } from 'components/BlogPost'
 
 import  {NavigationTool} from 'components/NavigationTool'
 
 
-const reducer = combineReducers({ user: user.reducer, messages: message.reducer })
+const reducer = combineReducers({ user: user.reducer })
 
 const store = configureStore({ reducer })
 
@@ -32,11 +29,11 @@ export const App = () => {
       <BrowserRouter>
       <div className="container">
         <h3>Hello</h3>
-        <NavigationTool />
+        {/* <NavigationTool /> */}
         <Switch>
           <Route path="/" exact>
            <Home />
-           {/* <Landing /> */}
+           <Landing />
           </Route>
           <Route path="/signup" exact>
             <Signup />
@@ -50,10 +47,19 @@ export const App = () => {
           <Route path="/about" exact>
             <About />
           </Route>
-          <Route path="/feed" exact>
-            {/* <MessageList /> */}
-            <Blog />
+          <Route path="/blogpost" exact>
+            <BlogPost />
           </Route>
+          <Route path="/blog" exact>
+            <BlogFeed />
+          </Route>
+          <Route path="/blog/:id" exact>
+            <BlogArticle />
+          </Route>
+          {/* <Route path="/feed" exact> */}
+            {/* <MessageList /> */}
+           
+          {/* </Route> */}
           <Route path="/contact" exact>
             <Contact />
           </Route>

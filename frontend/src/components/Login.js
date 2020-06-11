@@ -21,7 +21,7 @@ export const Login = () => {
 
   useEffect (() => {
   if (accessToken) {
-    history.push('/secrets')
+    history.push('/blogpost')
   } 
 })
 
