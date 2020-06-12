@@ -6,14 +6,13 @@ export const Contact = () => {
   const [message, setMessage] = useState('')
   
 
-const handleSubmit=(e)=> {
-  e.preventDefault();
 
-  fetch('https://final-project-by-tuliany.herokuapp.com/contact',{
+  const handleSubmit=(e)=> {
+  e.preventDefault()
+  fetch('https://final-project-by-tuliany.herokuapp.com/contact', {
       method: "POST",
       body: JSON.stringify({name, email, message}),
       headers: {
-        'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
     }).then(
