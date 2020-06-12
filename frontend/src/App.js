@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
 import { Provider } from "react-redux";
 
  import { user } from './reducers/user.js'
@@ -10,11 +11,11 @@ import { Signup } from 'components/Signup'
 import { Login } from 'components/Login'
 import { Secrets } from 'components/Secrets'
 import { About } from 'components/About'
-import { Contact } from 'components/Contact'
 import { BlogFeed } from 'components/BlogFeed'
 import { BlogArticle } from 'components/BlogArticle'
 import { Landing } from 'components/Landing'
 import { BlogPost } from 'components/BlogPost'
+// import { Contact } from 'components/Contact'
 
 import  {NavigationTool} from 'components/NavigationTool'
 
@@ -56,13 +57,7 @@ export const App = () => {
           <Route path="/blog/:id" exact>
             <BlogArticle />
           </Route>
-          {/* <Route path="/feed" exact> */}
-            {/* <MessageList /> */}
-           
-          {/* </Route> */}
-          <Route path="/contact" exact>
-            <Contact />
-          </Route>
+         
         </Switch>
         </div>
       </BrowserRouter>
