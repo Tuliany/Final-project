@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect } from 'react'
 
 export const Contact = () => {
@@ -10,9 +9,9 @@ export const Contact = () => {
 const handleSubmit=(e)=> {
   e.preventDefault();
 
-  fetch('http://localhost:3002/send',{
+  fetch('https://final-project-by-tuliany.herokuapp.com/contact',{
       method: "POST",
-      body: JSON.stringify(this.state),
+      body: JSON.stringify({name, email, message}),
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -26,7 +25,7 @@ const handleSubmit=(e)=> {
     }else if(response.status === 'fail'){
       alert("Message failed to send.")
     }
-  })
+  })}
 
 	return(
   	<div className="App">
@@ -37,7 +36,7 @@ const handleSubmit=(e)=> {
   	</div>
   	<div className="form-group">
       	<label htmlFor="exampleInputEmail1">Email address</label>
-      	<input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={email} onChange={e=>setEmail(e.target.value) } />
+      	<input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={email} onChange={e=>setEmail(e.target.value)} />
   	</div>
   	<div className="form-group">
       	<label htmlFor="message">Message</label>
@@ -46,10 +45,9 @@ const handleSubmit=(e)=> {
   	<button type="submit" className="btn btn-primary">Submit</button>
   	</form>
   	</div>
-)
-}
+)}
 
-}
+
 // import React, {useState, useEffect} from 'react';
 
 

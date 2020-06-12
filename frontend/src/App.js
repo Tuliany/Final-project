@@ -15,7 +15,7 @@ import { BlogFeed } from 'components/BlogFeed'
 import { BlogArticle } from 'components/BlogArticle'
 import { Landing } from 'components/Landing'
 import { BlogPost } from 'components/BlogPost'
-// import { Contact } from 'components/Contact'
+import { Contact } from 'components/Contact'
 
 import  {NavigationTool} from 'components/NavigationTool'
 
@@ -34,7 +34,7 @@ export const App = () => {
         <Switch>
           <Route path="/" exact>
            <Home />
-           <Landing />
+           {/* <Landing /> */}
           </Route>
           <Route path="/signup" exact>
             <Signup />
@@ -56,6 +56,9 @@ export const App = () => {
           </Route>
           <Route path="/blog/:id" exact>
             <BlogArticle />
+          </Route>
+          <Route path="/contact" exact>
+            <Contact />
           </Route>
          
         </Switch>
