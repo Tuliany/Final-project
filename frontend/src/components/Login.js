@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { user, login } from '../reducers/user'
+import { Facebook  } from 'components/Facebook'
 // import '../Style/Login.css'
 
 export const Login = () => {
@@ -48,6 +49,7 @@ export const Login = () => {
         <button type ="Home" onClick={() => history.push('/')}> Home </button>  
       </form>
       <h3>{errorMessage && <p> {`${errorMessage} `}</p>}</h3>
+      <Facebook />
     </div>
   )
 } 

@@ -10,8 +10,10 @@ export const NavigationTool = () => {
 
 
 
-<nav>  
-  
+<nav id="navToggle">  
+                <span></span>
+                <span></span>
+                <span></span>
   <a class="tab" data-text="PAGE ONE" href="./">HOME</a>
   <a class="tab" data-text="PAGE TWO" href="./about">ABOUT</a>
   <a class="tab" data-text="PAGE THREE" href="./feed">BLOG</a>
