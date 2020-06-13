@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
-import { SlideShow } from 'components/SlideShow'
-import '../Style/Home.css'
+import { Slideshow } from 'components/SlideShow'
+// import '../Style/Home.css'
 
 
 
@@ -13,7 +13,7 @@ export const Home = () => {
  
 
     <div>
-      <section className="main">
+      {/* <section className="main">
       <div class="content">
         <div class="slider-wrapper">
           Welcome to our community for...
@@ -34,13 +34,13 @@ export const Home = () => {
       </div>
 
         <h1>W Club Official 💎 </h1> 
-      </section>
+      </section> */}
       
       <form className="Home">
           <button type ="Login" onClick={() => history.push('/Login')}> Log in  </button>
           <button type ="Signup" onClick={() => history.push('/Signup')}> Create Accout </button>  
       </form>
-      {/* <SlideShow /> */}
+      <Slideshow />
     </div>
     
   )

@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 
 import { Home } from 'components/Home'
 import { Signup } from 'components/Signup'
+import { Slideshow } from 'components/SlideShow'
 import { Login } from 'components/Login'
 import { Secrets } from 'components/Secrets'
 import { About } from 'components/About'
@@ -34,6 +35,7 @@ export const App = () => {
         <Switch>
           <Route path="/" exact>
            <Home />
+           <Slideshow />
            {/* <Landing /> */}
           </Route>
           <Route path="/signup" exact>

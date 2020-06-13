@@ -1,6 +1,12 @@
-.image-container{
-  height: 300px;
-  width: 200px;
+/* @import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css"; */
+
+.Wrapper {
+  width: 100%
+}
+
+.Page {
+ width: 100%;
 }
 
 .Img{
