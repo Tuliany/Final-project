@@ -22,7 +22,7 @@ export const Login = () => {
 
   useEffect (() => {
   if (accessToken) {
-    history.push('/blogpost')
+    history.push('/admin')
   } 
 })
 

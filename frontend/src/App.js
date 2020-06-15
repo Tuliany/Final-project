@@ -44,7 +44,7 @@ export const App = () => {
           <Route path="/login" exact>
             <Login />
           </Route>
-          <Route path="/secrets" exact>
+          <Route path="/admin" exact>
             <Secrets />
           </Route>
           <Route path="/about" exact>

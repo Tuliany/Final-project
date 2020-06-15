@@ -1,7 +1,8 @@
 import React, { useEffect,useState} from 'react'
-import {BlogPost} from 'components/BlogPost'
 import {Link} from 'react-router-dom'
+import { FbComment } from 'components/FbComment'
 import '../Style/BlogFeed.css'
+import moment from 'moment'
 
 
 const url = 'http://localhost:8080/blog'
@@ -21,13 +22,13 @@ useEffect(() => {
       <div>
         {post&&
           post.map((blog) => ( 
-          <div>
           <Link to={`/blog/${blog._id}`}>          
-          <h1 dangerouslySetInnerHTML= {{ __html: blog.content }}>
-          </h1>
+          <h1 dangerouslySetInnerHTML= {{ __html: blog.content }}></h1>
+          <div class="fb-like" data-href="https://final-project-by-tuliany.herokuapp.com/blog" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"/>
+          <div class="fb-comments" data-href="https://final-project-by-tuliany.herokuapp.com/blog" data-numposts="5" data-width="" />
           </Link>
-          </div>
           ))} 
-          </div>
+
+        </div>
       )
     }
