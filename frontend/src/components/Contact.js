@@ -4,8 +4,6 @@ export const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-    
-  
   
   const handleSubmit=(e)=> {
     e.preventDefault()
@@ -17,7 +15,7 @@ export const Contact = () => {
         },
       }).then ((res) => {
         if (!res.ok) {
-            console.log('error?') 
+            console.log('error') 
         }else {
           return res.json()
         }
@@ -29,8 +27,7 @@ export const Contact = () => {
       })
       .catch((err)=> console.log('errors', err))
   }
-    
- 
+  
   return(
     <div>
      <form onSubmit={handleSubmit}>
