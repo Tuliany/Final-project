@@ -1,0 +1,48 @@
+[
+  {
+    "index": 0, 
+    "img":"https://drive.google.com/file/d/15Bcr6ojq967ifT3yzTy5KBRl_wBz7Hm7/view?usp=sharing",
+    "picture": "frontend/src/Data/Img1.jpg",
+    "name": "growth"
+  },
+  {
+    "index": 1, 
+    "picture": "frontend/src/Data/Img2.jpg",
+    "name": "Connection"
+  },
+  {
+    "index": 2, 
+    "picture": "frontend/src/Data/Img3.jpg",
+    "name": "Vision"
+  },
+  {
+    "index": 3, 
+    "picture": "frontend/src/Data/Img4.jpg",
+    "name": "Solidarity"
+  },
+  {
+    "index": 4, 
+    "picture": "frontend/src/Data/Img5.jpg",
+    "name": "Inspiration"
+  },
+  {
+    "index": 5, 
+    "picture": "frontend/src/Data/Img6.jpg",
+    "name": "Entrepreneurship"
+  },
+  {
+    "index": 6, 
+    "picture": "frontend/src/Data/Img7.jpg",
+    "name": "Sisterhood"
+  },
+  {
+    "index": 7, 
+    "picture": "frontend/src/Data/Img8.jpg",
+    "name": "Contemplation"
+  },
+  {
+    "index": 8, 
+    "picture": "frontend/src/Data/Img9.jpg",
+    "name": "WOB"
+  }
+]

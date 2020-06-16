@@ -5,10 +5,12 @@ import { Provider } from "react-redux";
 
  import { user } from './reducers/user.js'
  import { configureStore, combineReducers } from "@reduxjs/toolkit";
+ import { CSSTransition,SwitchTransition } from 'react-transition-group'
+
 
 import { Home } from 'components/Home'
 import { Signup } from 'components/Signup'
-import { Slideshow } from 'components/SlideShow'
+// import { SlideShow } from 'components/SlideShow'
 import { Login } from 'components/Login'
 import { Secrets } from 'components/Secrets'
 import { About } from 'components/About'
@@ -31,11 +33,15 @@ export const App = () => {
       <BrowserRouter>
       <div className="container">
         <h3>Hello</h3>
-        {/* <NavigationTool /> */}
+        <NavigationTool />
+        <SwitchTransition>
+        <CSSTransition
+          timeout={{ enter: 300, exit: 300 }}
+        >
         <Switch>
           <Route path="/" exact>
            <Home />
-           <Slideshow />
+           {/* <SlideShow /> */}
            {/* <Landing /> */}
           </Route>
           <Route path="/signup" exact>
@@ -62,8 +68,9 @@ export const App = () => {
           <Route path="/contact" exact>
             <Contact />
           </Route>
-         
         </Switch>
+        </CSSTransition>
+      </SwitchTransition>
         </div>
       </BrowserRouter>
     </Provider>
