@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
  import { CSSTransition,SwitchTransition } from 'react-transition-group'
 
 
-import { Home } from 'components/Home'
+import { Home } from 'Pages/Home'
 import { Signup } from 'components/Signup'
 // import { SlideShow } from 'components/SlideShow'
 import { Login } from 'components/Login'
@@ -31,8 +31,6 @@ export const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
-      <div className="container">
-        <h3>Hello</h3>
         <NavigationTool />
         <SwitchTransition>
         <CSSTransition
@@ -41,8 +39,6 @@ export const App = () => {
         <Switch>
           <Route path="/" exact>
            <Home />
-           {/* <SlideShow /> */}
-           {/* <Landing /> */}
           </Route>
           <Route path="/signup" exact>
             <Signup />
@@ -71,8 +67,7 @@ export const App = () => {
         </Switch>
         </CSSTransition>
       </SwitchTransition>
-        </div>
-      </BrowserRouter>
+     </BrowserRouter>
     </Provider>
   )
 }

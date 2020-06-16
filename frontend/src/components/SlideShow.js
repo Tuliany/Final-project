@@ -4,8 +4,6 @@ import '../Style/SlideShow.css'
 
 import HeroSlider, {
   Slide,
-  ButtonsNav,
-  Nav,
   OverlayContainer,
   AutoplayButton
 } from "hero-slider";
@@ -13,13 +11,9 @@ import HeroSlider, {
 
 // Images
 const Growth = "/Data/Img1.jpg"
-const Connection = "/Data/Img2.jpg"
-const Vision = "/Data/Img3.jpg"
 const Solidarity = "/Data/Img4.jpg"
 const Inspiration= "/Data/Img5.jpg"
 const Entrepreneurship = "/Data/Img6.jpg"
-const Sisterhood = "/Data/Img7.jpg"
-const Contemplation = "/Data/Img8.jpg"
 const WOB = "/Data/Img9.jpg"
 
 export const SlideShow = () => {
@@ -38,116 +32,63 @@ export const SlideShow = () => {
       settings={{
         slidingDuration: 500,
         slidingDelay: 100,
+        sliderFadeInDuration: 50,	
         shouldAutoplay: true,
-        shouldDisplayButtons: true,
+        shouldDisplayButtons: false,
         autoplayDuration: 5000,
         height: "80vh"
       }}
     >
       <OverlayContainer>
-      <div class="preload-transitions">
+
           <div class="slider">
               <div class="slider-text1">Growth</div>
-              <div class="slider-text2">Connection</div>
-              <div class="slider-text3">Vision</div>
-              <div class="slider-text4">Solidarity</div>
-              <div class="slider-text5">Inspiration</div>
-              <div class="slider-text6">Entrepreneurship</div>
-              <div class="slider-text7">Sisterhood</div>
-              <div class="slider-text8">Contemplation</div>
-              <div class="slider-text9">Women of Marbella</div>
-
-             
-            </div>
+              <div class="slider-text2">Sisterhood</div>
+              <div class="slider-text3">Inspiration</div>
+              <div class="slider-text4">Entrepreneurship</div>
+              <div class="slider-text5">Women of Marbella</div>
           </div>
       </OverlayContainer>
-      <AutoplayButton />
+        <AutoplayButton />
       <Slide
-        // navDescription="Hallstatt - Austria"
         background={{
           backgroundImage: Growth,
-          backgroundAnimation: "zoom"
+          backgroundAnimation: "zoom",
+          // maskBackgroundBlendMode: 'luminosity',	
         }}
       />
 
       <Slide
-        // navDescription="Hvitserkur - Iceland"
-        background={{
-          backgroundImage: Connection,
-          backgroundAnimation: "zoom"
-        }}
-      />
-
-      <Slide
-        // navDescription="Jacksonville - USA"
-        background={{
-          backgroundImage: Vision,
-          backgroundAnimation: "zoom"
-        }}
-      />
-
-      <Slide
-        // navDescription="Moraine Lake - Canada"
         background={{
           backgroundImage: Solidarity,
-          backgroundAnimation: "zoom"
+          backgroundAnimation: "zoom",
+          maskBackgroundBlendMode: 'luminosity',
         }}
       />
 
-
       <Slide
-        // navDescription="Moraine Lake - Canada"
         background={{
           backgroundImage: Inspiration,
-          backgroundAnimation: "zoom"
+          backgroundAnimation: "zoom",
+          maskBackgroundBlendMode: 'luminosity',
         }}
       />
 
-
       <Slide
-        // navDescription="Moraine Lake - Canada"
         background={{
           backgroundImage: Entrepreneurship,
-          backgroundAnimation: "zoom"
+          backgroundAnimation: "zoom",
+          maskBackgroundBlendMode: 'luminosity',
         }}
       />
 
-
-    <Slide
-        // navDescription="Moraine Lake - Canada"
-        background={{
-          backgroundImage: Sisterhood,
-          backgroundAnimation: "zoom"
-        }}
-      />  
-
       <Slide
-        // navDescription="Moraine Lake - Canada"
-        background={{
-          backgroundImage: Contemplation,
-          backgroundAnimation: "zoom"
-        }}
-      />
-
-
-      <Slide
-        // navDescription="Moraine Lake - Canada"
         background={{
           backgroundImage: WOB,
           backgroundAnimation: "zoom"
         }}
       />
 
-      {/* <ButtonsNav
-        isNullAfterThreshold
-        position={{
-          top: 0,
-          left: "50%",
-          transform: "translateX(-50%)"
-        }}
-      /> */}
-      
-      <Nav />
     </HeroSlider>
   );
 };
