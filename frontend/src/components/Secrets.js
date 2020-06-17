@@ -2,7 +2,7 @@ import React from 'react'
 import { logout } from '../reducers/user'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-// import '../Style/Secrets.css'
+import '../Style/Secrets.css'
 
 export const Secrets = () => {
   const dispatch = useDispatch()

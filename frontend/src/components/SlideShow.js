@@ -36,7 +36,7 @@ export const SlideShow = () => {
         shouldAutoplay: true,
         shouldDisplayButtons: false,
         autoplayDuration: 5000,
-        height: "80vh"
+        height: "90vh"
       }}
     >
       <OverlayContainer>

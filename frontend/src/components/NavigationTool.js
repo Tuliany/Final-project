@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import { Nav, Navbar, NavItem, NavLink, NavDropdown, InputGroup, Form, FormControl, Button } from "react-bootstrap";
+import { Nav, NavDropdown } from "react-bootstrap";
 import '../Style/NavigationTool.css'
 
 
@@ -37,7 +36,7 @@ export const NavigationTool = () =>{
   <li>
     <NavDropdown title="Member" id="basic-nav-dropdown">
         <NavDropdown.Item href="/login">Login</NavDropdown.Item>
-         <NavDropdown.Item href="/signup">Signup</NavDropdown.Item>
+         <NavDropdown.Item href="/signup">Become</NavDropdown.Item>
     </NavDropdown>
     </li>
     </ul>

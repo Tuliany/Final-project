@@ -1,9 +1,30 @@
 h1{
-color:black;
+color:white;
 }
 h3{
-  color: black;
+  color: white;
 }
 .blog._id{
-  color:black;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 650px;
+  height: fit-content;
+  background-color:rgba(255, 234, 234, 0.5);
+  margin: auto auto;
+  padding: 40px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 0 10px black;
+  -webkit-box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
+  text-align: center;
+  color: white;
 }

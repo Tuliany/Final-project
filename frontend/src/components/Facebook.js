@@ -24,7 +24,7 @@ export const Facebook = () =>{
   
   useEffect (()=>{
     if (accessToken){
-      history.push('./blogpost')
+      history.push('./secrets')
     }
   })
 
@@ -40,7 +40,6 @@ export const Facebook = () =>{
   if (!accessToken){
     return (
   <div> 
-    React Facebook Login
   <FacebookLogin
     appId="3054377501311620"
     autoLoad={true}

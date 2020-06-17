@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { user, login } from '../reducers/user'
 import { Facebook  } from 'components/Facebook'
-// import '../Style/Login.css'
+import '../Style/Login.css'
 
 export const Login = () => {
    const history = useHistory()
@@ -22,7 +22,7 @@ export const Login = () => {
 
   useEffect (() => {
   if (accessToken) {
-    history.push('/admin')
+    history.push('/secrets')
   } 
 })
 
@@ -33,23 +33,24 @@ export const Login = () => {
  if (!accessToken) {
   return (
     <div>
-      <form className="login">
-        <label>LOG IN!</label>
-          <div className="question">
-              <input type="text" placeholder="Name"required 
-              value={name} onChange={event => setName(event.target.value)}/>
-          </div>
-          <div className="question">
-              <input type="password" placeholder="Password"required 
-              value={password} onChange={event => setPassword(event.target.value)}/>
-          </div>
-        <button type="submit" onClick={handleLogin}>
-            Login
-        </button>
-        <button type ="Home" onClick={() => history.push('/')}> Home </button>  
+      <form className="content">
+        <div className="title">LOG IN!</div>
+          <input type="text" placeholder="Name"required 
+            value={name} onChange={event => setName(event.target.value)}/>
+          <input type="password" placeholder="Password"required 
+            value={password} onChange={event => setPassword(event.target.value)}/>  
+          <button type="submit" onClick={handleLogin}> Login</button>
+        <div className="social"> <span>or login with social media</span></div>
+
+          <button><Facebook /></button>
+    {/* <button className="twitter"><i class="fa fa-twitter"></i>Twitter</button>
+    <button className="google"><i class="fa fa-google-plus"></i>Google</button> */}
+  
+      <div class="already">Create an account? <a href="./signup">Sign up</a></div>
+        {/* <button type ="Home" onClick={() => history.push('/')}> Home </button>   */}
       </form>
       <h3>{errorMessage && <p> {`${errorMessage} `}</p>}</h3>
-      <Facebook />
+      
     </div>
   )
 } 
@@ -60,3 +61,5 @@ else {
 }
 
 export default Login
+
+

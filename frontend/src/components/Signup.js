@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { user,signup } from '../reducers/user'
-// import '../Style/Signup.css'
+import { Facebook  } from 'components/Facebook'
+import '../Style/Signup.css'
 
 export const Signup = () => {
   const history = useHistory ()
@@ -32,25 +33,25 @@ export const Signup = () => {
   
   return (
     <div>
-      <form className="Signup">
-        <label> SIGN UP!</label>
-          <div className="question">
+      <form className="content">
+        <div class="title">Create account</div>
             <input type="text" placeholder="Name"required 
             value={name} onChange={event => setName(event.target.value)}/>
-          </div>
-          <div className="question">
+          
+         
             <input type="email" placeholder="Email"required 
             value={email} onChange={event => setEmail(event.target.value)}/>
-          </div>
-          <div className="question">
+        
             <input type="password" placeholder="Password"required 
             value={password} onChange={event => setPassword(event.target.value)}/>
-          </div>
-      <button type="submit" onClick={handleSignup}>
-        Submit
-      </button>
-      <button type ="Home" onClick={() => history.push('/')}> Home </button> 
-    </form>
+            
+            <input type="checkbox" id="rememberMe"/>
+            <label for="rememberMe"></label><span>I have read and agree to the <a href="#">Terms of Use </a>and <a href="#">Privacy Policy</a></span>
+            <button type="submit" onClick={handleSignup}>Create Account</button>
+            <div class="social"> <span>or sign up with social media</span></div>
+            <button className="facebook"><Facebook /></button>
+      {/* <button type ="Home" onClick={() => history.push('/')}> Home </button>  */}
+      </form>
     <h3>{signupError && <p> {`${signupError}`}</p>}</h3>
   </div>
   )

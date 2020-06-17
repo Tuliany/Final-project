@@ -1,10 +1,11 @@
 
 .slider{
-  width: 75%;
+  width: 100%;
   height: 27.5rem;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  /* text-align: center; */
 }
 .slider-container {
   width: 1000rem;
@@ -55,7 +56,7 @@
 .slider-text3 {
   font-size: 4rem;
   position: absolute;
-  left: 38%;
+  left: 26%;
   top: 65%;
   opacity: 0;
   animation-name: fadeInOut;
@@ -81,7 +82,7 @@
 
 
 .slider-text5 {
-  font-size: 5rem;
+  font-size: 5.5rem;
   position: absolute;
   left: 25%;
   bottom: 5%;
