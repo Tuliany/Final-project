@@ -1,30 +1,34 @@
 import React, { useState} from 'react';
+import { useSelector } from 'react-redux'
 import { Editor } from '@tinymce/tinymce-react'
 
 export const BlogPost = (props) => {
   const [blogContent, setBlogContent] = useState('')
+  const accessToken = useSelector((store)=>store.user.login.accessToken)
 
     const handleSubmit= (e) =>{
       e.preventDefault()
       console.log(blogContent)
+
+      // console.log(accessToken)
       fetch('http://localhost:8080/blogpost',{
         method: 'POST',
         body: JSON.stringify({ content: blogContent, title : 'title'}),
         // body: JSON.stringify({ content }),
         headers: {
+          'Authorization' : accessToken, 
           'Content-Type': 'application/json'
         },
   
       }).then ((res) =>{
         if (!res.ok){
           console.log('error')
-        } else{
+        } else {
           return res.json()
         }
       })
       .then (()=>{
         setBlogContent('')
-        // props.onFormSubmit(content)
       })
       .catch((err)=> console.log ('errors', err))
     }

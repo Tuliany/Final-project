@@ -39,7 +39,9 @@ export const Login = () => {
             value={name} onChange={event => setName(event.target.value)}/>
           <input type="password" placeholder="Password"required 
             value={password} onChange={event => setPassword(event.target.value)}/>  
+
           <button type="submit" onClick={handleLogin}> Login</button>
+
         <div className="social"> <span>or login with social media</span></div>
 
           <button><Facebook /></button>

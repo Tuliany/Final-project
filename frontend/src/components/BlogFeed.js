@@ -24,8 +24,8 @@ useEffect(() => {
           post.map((blog) => ( 
           
           <Link to={`/blog/${blog._id}`}>     
-          {blog.content}     
-          {/* <h10 dangerouslySetInnerHTML= {{ __html: blog.content }}></h10> */}
+          {/* {blog.content}      */}
+          <h10 dangerouslySetInnerHTML= {{ __html: blog.content }}></h10>
           <div class="fb-like" data-href="https://final-project-by-tuliany.herokuapp.com/blog" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"/>
           <div class="fb-comments" data-href="https://final-project-by-tuliany.herokuapp.com/blog" data-numposts="5" data-width="" />
          </Link>

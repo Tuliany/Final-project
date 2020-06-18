@@ -42,7 +42,7 @@ export const Facebook = () =>{
   <div> 
   <FacebookLogin
     appId="3054377501311620"
-    autoLoad={true}
+    autoLoad={false}
     fields="name,email,picture"
     onClick={componentClicked}
     callback={responseFacebook} 
@@ -53,40 +53,5 @@ export const Facebook = () =>{
   return <null />
 }
 }
-
-
-
-// export const Facebook = () => {
-//   state = {
-//     isLoggedIn: false,
-//     userId: '',
-//     name: '',
-//     email: '',
-//     picture: '',
-//   }
-
-//   const responseFacebook = response =>  {
-//     console.log(response)
-//   }
-  
-//    const componentClicked = () => console.log('clicked');
-//    const fbContent = () =>{
-//     if (this.state.isLoggedIn) {
-//       fbContent = null
-//     } else {
-      
-//     <FacebookLogin
-//   appId="3054377501311620"
-//   autoLoad={true}
-//   fields="name,email,picture"
-//   onClick={this.componentClicked}
-//   callback={this.responseFacebook} 
-//   />
-//     }
-//   }
-  
-//     return (<div>{fbContent}</div>
-//     )
-//   } 
 
 

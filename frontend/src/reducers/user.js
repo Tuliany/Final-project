@@ -39,7 +39,7 @@ export const user = createSlice({
 
 // THUNK 
 export const login = (name, password) => {
-  const LOGIN_URL ='https://final-project-by-tuliany.herokuapp.com/login'
+  const LOGIN_URL ='http://localhost:8080/login'
   return (dispatch, getState) => {
     fetch(`${LOGIN_URL}`, 
     {
@@ -54,7 +54,9 @@ export const login = (name, password) => {
        return res.json()
     })
      .then((json)=> {
-       dispatch(user.actions.setAccessToken({accessToken: json.accessToken}))
+       console.log(json.accessToken)
+
+       dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }))
        dispatch(user.actions.setUserName({ userName: name }))
       })
      .catch((err) => {
@@ -65,7 +67,7 @@ export const login = (name, password) => {
 }
 
 export const signup = (name, email, password) =>{
-  const SIGNUP_URL ='https://final-project-by-tuliany.herokuapp.com/signup'
+  const SIGNUP_URL ='http://localhost:8080/signup'
   return (dispatch, getState) =>{
     fetch(`${SIGNUP_URL}`,
     {

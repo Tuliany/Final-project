@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import { Nav, NavDropdown } from "react-bootstrap";
 import '../Style/NavigationTool.css'
 
@@ -13,25 +15,25 @@ export const NavigationTool = () =>{
   return (
    <div>
     <label>
-  <input type='checkbox' />
-  <span class='menu'>
+    <input type='checkbox' />
+    <span class='menu'>
     <span class='hamburger'></span>
   </span>
   <ul>
     <li>
-      <Nav.Link href='./'>Home</Nav.Link>
+      <Link to='./'>Home</Link>
     </li>
     <li>
-      <Nav.Link href='./about'>Our Story</Nav.Link>
+      <Link to='./about'>Our Story</Link>
     </li>
     <li>
-      <Nav.Link href='./blog'>Blog</Nav.Link>
+      <Link to='./blog'>Blog</Link>
     </li>
     <li>
-      <Nav.Link href='./events'>Events</Nav.Link>
+      <Link to='./events'>Events</Link>
     </li>
     <li>
-      <Nav.Link href='./contact'>Contact us</Nav.Link>
+      <Link to='./contact'>Contact us</Link>
     </li>
   <li>
     <NavDropdown title="Member" id="basic-nav-dropdown">
