@@ -13,7 +13,7 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   height: 50px;
   position: fixed;
-  top: 40%;
+  bottom: 10%;
   margin: 1px;
   /* grid-auto-columns: minmax(min-content, auto); */
   align-items: center;
