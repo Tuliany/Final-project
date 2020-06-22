@@ -10,15 +10,14 @@ import { Provider } from "react-redux";
 
 import { Home } from 'Pages/Home'
 import { Signup } from 'components/Signup'
-// import { SlideShow } from 'components/SlideShow'
 import { Login } from 'components/Login'
-import { Secrets } from 'components/Secrets'
+import { Admin } from 'Not Included/Admin'
 import { About } from 'Pages/About'
+import { Events } from 'Pages/Events'
 import { BlogFeed } from 'components/BlogFeed'
-import { BlogArticle } from 'components/BlogArticle'
-import { Landing } from 'components/Landing'
 import { BlogPost } from 'components/BlogPost'
 import { Contact } from 'Pages/Contact'
+import { Footer } from 'components/Footer'
 
 import  {NavigationTool} from 'components/NavigationTool'
 
@@ -47,10 +46,14 @@ export const App = () => {
             <Login />
           </Route>
           <Route path="/admin" exact>
-            <Secrets />
+            <Admin />
           </Route>
           <Route path="/about" exact>
             <About />
+          </Route>
+    
+          <Route path="/events" exact>
+            <Events />
           </Route>
           <Route path="/blogpost" exact>
             <BlogPost />
@@ -58,15 +61,13 @@ export const App = () => {
           <Route path="/blog" exact>
             <BlogFeed />
           </Route>
-          <Route path="/blog/:id" exact>
-            <BlogArticle />
-          </Route>
           <Route path="/contact" exact>
             <Contact />
           </Route>
         </Switch>
         </CSSTransition>
       </SwitchTransition>
+      <Footer />
      </BrowserRouter>
     </Provider>
   )

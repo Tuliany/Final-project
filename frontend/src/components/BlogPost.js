@@ -1,22 +1,28 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react'
+import { useHistory } from 'react-router-dom'
+
 import { useSelector } from 'react-redux'
 import { Editor } from '@tinymce/tinymce-react'
 
 export const BlogPost = (props) => {
+  const history = useHistory()
   const [blogContent, setBlogContent] = useState('')
   const accessToken = useSelector((store)=>store.user.login.accessToken)
 
+  useEffect(() => {
+    if (!accessToken) {
+      history.push('/')
+    }
+  })
     const handleSubmit= (e) =>{
       e.preventDefault()
       console.log(blogContent)
 
-      // console.log(accessToken)
-      fetch('http://localhost:8080/blogpost',{
+      fetch('http://localhost:8080/blogpost', {
         method: 'POST',
-        body: JSON.stringify({ content: blogContent, title : 'title'}),
-        // body: JSON.stringify({ content }),
+        body: JSON.stringify({ content: blogContent }),
         headers: {
-          'Authorization' : accessToken, 
+          Authorization : accessToken, 
           'Content-Type': 'application/json'
         },
   

@@ -20,6 +20,7 @@ export const Contact = () => {
         if (!res.ok) {
             console.log('error') 
         }else {
+          console.log('email sent with new password')
           return res.json()
         }
       })
@@ -38,7 +39,6 @@ export const Contact = () => {
        <input id="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
        <input id="message" textarea="20" placeholder="Message" value={message} onChange={(e)=> setMessage(e.target.value)}/>
        <button type="submit" onClick={handleSubmit}>Send message</button>
-
      </form>
    </div>
   )

@@ -155,51 +155,23 @@ app.post('/login', async (req, res) => {
   }
 })
 
-// app.post('/resetpassword', (req, res, next) =>{
-//   const email = req.body
-
-//   return User.findOne({email})
-//   .then((user) => {
-//     if (!user) {
-//       next({
-//         error: {
-//           message: `User doesn't exist`
-//         }
-//       })
-//     }
-//     crypto.randomBytes(20, function(err, buf){
-//       const token = buf.toString('hex')
-//       user.resetPassword.token = token
-//       user.resetPassword.expiration = Date.now() + 1000 * 60 * 60
+ 
+app.put ('/reset', async (req, res) => {
+  try{
+    const { token, email, newPassword } = req.body
+    const User = await User.findOne({resetpasswordToken: token,})
+     
+      const newUser = await User.findOneAndUpdate
+      ({ resetpasswordToken: token }, {password: bcrypt.hashSync(newPassword) }, {new: true})
+      res.json(newUser)
+       
+  } catch (err){
+    res.status(400).json ({ err: err })
+  }
+})
 
 
 
-//     })
-//   })
-  
-// })
-
-
-// app.post('/forgot', req, res) => {
-//   const thisUser = getUser(req.body.email)
-//   if(thisUser) {
-//     const id =uuidv1()
-//     const request = {
-//       id, 
-//       email: thisUser.email
-//     }
-//     createResetRequest(request)
-//     sendResetLink(thisUser.email, id)
-//   }
-// }
-
-// app.post('/reset', resetPassword)
-
-// app.post('/reset/token', resetPasswordToken, resetCallback)
-// app.get('/reset-password', (req, res) => {
-//   const { token } = req.query
-//   res.status(200).send(token)
-// })
 
 app.post('/resetpassword', (req, res) => {
   if (req.body.email === ''){
@@ -212,22 +184,13 @@ app.post('/resetpassword', (req, res) => {
     }
   })
   .then((user)=>{
-    if (user ==null){
+    if (user == null){
       console.error('email not in database')
       res.status(403).send('email not found')
     } else {
       const token = crypto.randomByton(20).toString('hex')
       user.update({
-        resetpasswordToken: token,
-        resetpasswordExpires: Date.now() + 3600000
-      })
-
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: `${process.env.EMAIL_ADRESS}`,
-          pass: `${process.env.EMAIL_PASSWORD}`
-        }
+        resetpasswordToken: token
       })
 
       const mailOptions = {
@@ -257,6 +220,7 @@ app.post('/resetpassword', (req, res) => {
 app.get('/about', (req, res) => {
   res.send('About us')
 })
+
 app.post('/blogpost', authenticateUser)
 app.post('/blogpost', async (req, res) => {
   try {

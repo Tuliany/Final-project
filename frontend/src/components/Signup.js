@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { user,signup } from '../reducers/user'
-import { Facebook  } from 'components/Facebook'
+
 import '../Style/Signup.css'
 
 export const Signup = () => {
@@ -23,7 +23,7 @@ export const Signup = () => {
  
   useEffect (() => {
     if (accessToken) {
-      history.push('/secrets')
+      history.push('/admin')
     }
   })
 
@@ -46,11 +46,9 @@ export const Signup = () => {
             value={password} onChange={event => setPassword(event.target.value)}/>
             
             <input type="checkbox" id="rememberMe"/>
-            <label for="rememberMe"></label><span>I have read and agree to the <a href="#">Terms of Use </a>and <a href="#">Privacy Policy</a></span>
+            <label for="rememberMe"></label><span>I have read and agree to the <a className="terms" href="#">Terms of Use </a>and <a href="#">Privacy Policy</a></span>
             <button type="submit" onClick={handleSignup}>Create Account</button>
-            <div class="social"> <span>or sign up with social media</span></div>
-            <button className="facebook"><Facebook /></button>
-      {/* <button type ="Home" onClick={() => history.push('/')}> Home </button>  */}
+      
       </form>
     <h3>{signupError && <p> {`${signupError}`}</p>}</h3>
   </div>

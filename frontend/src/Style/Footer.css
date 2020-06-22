@@ -1,0 +1,53 @@
+
+a {
+  text-decoration: none;
+  color: #eadaa2;
+  margin: 2px;
+}
+a:hover {
+  color: #e1c978;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 50px;
+  position: fixed;
+  top: 40%;
+  margin: 1px;
+  /* grid-auto-columns: minmax(min-content, auto); */
+  align-items: center;
+  justify-items: center;
+  font-size: 12px !important;
+  color: #eadaa2;
+}
+
+
+@media (max-width: 750px) {
+  .grid {
+    position: relative;
+    left:10%;
+  }
+  .contact {
+    grid-row-start: 2;
+    background-color: #b1371a;
+  }
+
+}
+.branding {
+  padding: 10px;
+}
+.branding p {
+  padding: 5px;
+}
+@media (max-width: 50em) {
+  .social{
+    display:none;
+  }
+  .contact{
+    display:none;
+  }
+  .branding {
+    display:none;
+  }
+}

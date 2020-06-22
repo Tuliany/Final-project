@@ -6,7 +6,9 @@ const initialState = {
     message: "",
     errorMessage: null,
     signupErrorMessage: null,
-    userName: null
+    userName: null,
+    isAuthorized: false,
+    // userId: ''
   }
 }
 
@@ -24,6 +26,15 @@ export const user = createSlice({
       console.log(`User name: ${userName}`)
       state.login.userName = userName
     },
+    //   setUserId: (state, action) => {
+    //   const { userId } = action.payload
+    //   console.log(`User Id: ${userId}`)
+    //   state.login.userId = action.payload
+    // } ,
+      autorized: (state) => {
+      // console.log(`Authorized: ${autorized}`)
+      state.isAuthorized = true
+    },
       setErrorMessage: (state, action) => {
       const { errorMessage } = action.payload
       console.log(`Error Message: ${errorMessage}`)
@@ -34,12 +45,15 @@ export const user = createSlice({
       console.log(`Error Message: ${signupErrorMessage}`)
       state.login.signupErrorMessage = signupErrorMessage
     },
+    login: (state) => { state.isAuthorized = true },
+    logout: (state) => { state.isAuthorized = false }
   }
 })
 
 // THUNK 
 export const login = (name, password) => {
-  const LOGIN_URL ='http://localhost:8080/login'
+  const LOGIN_URL = 'https://final-project-by-tuliany.herokuapp.com/login'
+  // const LOGIN_URL ='http://localhost:8080/login'
   return (dispatch, getState) => {
     fetch(`${LOGIN_URL}`, 
     {
@@ -58,6 +72,7 @@ export const login = (name, password) => {
 
        dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }))
        dispatch(user.actions.setUserName({ userName: name }))
+       
       })
      .catch((err) => {
        dispatch(user.actions.setErrorMessage({ errorMessage: err }))
@@ -67,7 +82,8 @@ export const login = (name, password) => {
 }
 
 export const signup = (name, email, password) =>{
-  const SIGNUP_URL ='http://localhost:8080/signup'
+  const SIGNUP_URL = 'https://final-project-by-tuliany.herokuapp.com/signup'
+  // const SIGNUP_URL ='http://localhost:8080/signup'
   return (dispatch, getState) =>{
     fetch(`${SIGNUP_URL}`,
     {
@@ -84,6 +100,7 @@ export const signup = (name, email, password) =>{
     .then((json) => {
       dispatch(user.actions.setAccessToken({accessToken: json.accessToken}))
       dispatch(user.actions.setUserName({ userName: name }))
+      // dispatch(user.action.setUserId(userId))
       })
         .catch((err) => {
           dispatch(user.actions.setSignupErrorMessage({signupErrorMessage: err}))

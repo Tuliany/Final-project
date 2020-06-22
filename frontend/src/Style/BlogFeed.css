@@ -1,6 +1,4 @@
-h1{
-color:white;
-}
+
 h3{
   color: white;
 }
@@ -9,11 +7,11 @@ h3{
 }
 
 .container {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: 0; */
   width: 650px;
   height: fit-content;
   background-color:rgba(255, 234, 234, 0.5);
@@ -28,3 +26,66 @@ h3{
   text-align: center;
   color: white;
 }
+body {
+  background: #e5ded8;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.blog-container {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 100;
+  margin-bottom: 48px;
+  width: 20rem;
+  position: relative;
+  left: 10%;
+}
+@media screen and (min-width: 480px) {
+  .blog-container {
+    width: 28rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .blog-container {
+    width: 40rem;
+  }
+}
+@media screen and (min-width: 959px) {
+  .blog-container {
+    width: 50rem;
+  }
+}
+
+.blog-container a {
+  color: #4d4dff;
+  text-decoration: none;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+}
+.blog-container a:hover {
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+}
+
+.blog-cover {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/17779/yosemite-3.jpg");
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+  height: 15rem;
+  box-shadow: inset rgba(0, 0, 0, 0.2) 0 64px 64px 16px;
+}
+
+
+.blog-body {
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+.blog-summary p {
+  color: #4d4d4d;
+}
+

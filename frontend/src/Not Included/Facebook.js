@@ -24,7 +24,7 @@ export const Facebook = () =>{
   
   useEffect (()=>{
     if (accessToken){
-      history.push('./secrets')
+      history.push('/admin')
     }
   })
 

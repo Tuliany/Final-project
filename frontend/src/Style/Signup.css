@@ -13,7 +13,7 @@ body {
   font-weight: 600;
 }
 
-a {
+a .terms {
   color: #fff
 }
 
@@ -48,7 +48,7 @@ a {
   width: 540px;
   height: fit-content;
   background-color:rgba(255, 234, 234, 0.5);
-  margin: auto auto;
+  margin: 20px;
   padding: 40px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -164,20 +164,7 @@ a {
 .content .buttons button i {
   padding-right: 7px;
 }
-/* .content .button .facebook {
-  background-color: #4464B2;
-} */
-/* .kep-login-facebook.metro {
-  border-radius: 0;
-  color: white;
-} */
 
-.content .buttons button.twitter {
-  background-color: #28A9E0;
-}
-.content .buttons button.google {
-  background-color: #DA4735;
-}
 .content .buttons:after {
   content: "";
   display: block;

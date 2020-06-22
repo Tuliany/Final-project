@@ -1,48 +1,83 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { useHistory, NavLink } from 'react-router-dom';
 
 import { Nav, NavDropdown } from "react-bootstrap";
+
+import { logout } from '../reducers/user'
+
 import '../Style/NavigationTool.css'
 
 
 
 
+export const NavigationTool = () => {
+  const accessToken = useSelector((store)=> store.user.login.accessToken)
+  const dispatch = useDispatch()
+  const history = useHistory()
 
+  const handleLogout = event => {
+    event.preventDefault()
+    dispatch(logout())
+    history.push('/')
+  }
 
-export const NavigationTool = () =>{
-
-  
   return (
    <div>
     <label>
-    <input type='checkbox' />
-    <span class='menu'>
-    <span class='hamburger'></span>
-  </span>
-  <ul>
-    <li>
-      <Link to='./'>Home</Link>
-    </li>
-    <li>
-      <Link to='./about'>Our Story</Link>
-    </li>
-    <li>
-      <Link to='./blog'>Blog</Link>
-    </li>
-    <li>
-      <Link to='./events'>Events</Link>
-    </li>
-    <li>
-      <Link to='./contact'>Contact us</Link>
-    </li>
-  <li>
-    <NavDropdown title="Member" id="basic-nav-dropdown">
-        <NavDropdown.Item href="/login">Login</NavDropdown.Item>
-         <NavDropdown.Item href="/signup">Become</NavDropdown.Item>
-    </NavDropdown>
-    </li>
-    </ul>
-</label>
+      <input type='checkbox' />
+       <span class='menu'>
+        <span class='hamburger'></span>
+      </span>
+      {!accessToken &&
+      <ul>
+        <li>
+          <Nav.Link href='/'>Home</Nav.Link>
+        </li>
+        <li>
+          <Nav.Link href='/about'>Our Story</Nav.Link>
+        </li>
+        <li>
+          <Nav.Link href='/blog'>Blog</Nav.Link>
+        </li>
+        <li>
+          <Nav.Link href='/contact'>Contact us</Nav.Link>
+        </li>
+        <li>
+          <NavDropdown title="Member" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+              <NavDropdown.Item href="/signup">Signup</NavDropdown.Item> 
+          </NavDropdown>
+        </li>
+      </ul>
+      }
+      { accessToken &&
+       <ul>
+         <li>
+           <Nav.Link href='/'>Home</Nav.Link>
+         </li>
+         <li>
+           <Nav.Link href='/about'>Our Story</Nav.Link>
+         </li>
+         <li>
+           <Nav.Link href='/blog'>Blog</Nav.Link>
+         </li>
+         <li>
+           <NavLink activeClassName="active" to='/blogpost'>Share Knowledge</NavLink>
+         </li>
+         <li>
+           <NavLink to='/events'>Events</NavLink>
+         </li>
+         <li>
+           <Nav.Link href='/contact'>Contact us</Nav.Link>
+         </li>
+         <li>
+         <Nav.Link  onClick={handleLogout} href='/'>Logout</Nav.Link>
+           
+         </li>
+       </ul>
+      }
+    </label>
   </div>
   )
 }
