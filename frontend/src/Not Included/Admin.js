@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { logout, login } from '../reducers/user'
 
 import { useDispatch, useSelector } from 'react-redux'
-import '../Style/Admin.css'
+// import '../Style/Admin.css'
 
 export const Admin = () => {
   const history = useHistory()

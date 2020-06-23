@@ -18,11 +18,12 @@ export const BlogPost = (props) => {
       e.preventDefault()
       console.log(blogContent)
 
-      fetch('http://localhost:8080/blogpost', {
+      fetch ('https://final-project-by-tuliany.herokuapp.com/blogpost', {
+      // fetch('http://localhost:8080/blogpost', {
         method: 'POST',
         body: JSON.stringify({ content: blogContent }),
         headers: {
-          Authorization : accessToken, 
+          'Authorization' : accessToken, 
           'Content-Type': 'application/json'
         },
   

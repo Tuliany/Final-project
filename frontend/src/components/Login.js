@@ -30,7 +30,7 @@ export const Login = () => {
 
  if (!accessToken) {
   return (
-    <div>
+    <div className="login">
       <form className="content">
         <div className="title">LOG IN!</div>
           <input type="text" placeholder="Name"required 

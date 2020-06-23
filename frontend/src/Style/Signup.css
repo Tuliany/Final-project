@@ -9,7 +9,7 @@ html {
 body {
   font-family: "Open Sans";
   font-size: 16px;
-  /* color: White; */
+  color: White;
   font-weight: 600;
 }
 
@@ -78,7 +78,7 @@ a .terms {
 .content input[type=checkbox] {
   display: none;
 }
-.content label {
+/* .content label {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -87,8 +87,8 @@ a .terms {
   margin-left: 5px;
   margin-right: 10px;
   top: 5px;
-}
-.content label:before {
+} */
+/* .content label:before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -103,7 +103,7 @@ a .terms {
   -moz-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
   box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
-}
+} */
 .content input[type=checkbox]:checked + label:before {
   content: "\2713";
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -127,31 +127,10 @@ a .terms {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-.content .social {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-.content .social span {
-  display: inline-block;
-  vertical-align: baseline;
-  padding: 0 20px;
-}
-.content .social span:before, .content .social span:after {
-  content: '';
-  display: block;
-  width: 500px;
-  position: absolute;
-  top: 0.9em;
-  border-top: 1px solid White;
-}
-.content .social span:before {
-  right: 75%;
-}
-.content .social span:after {
-  left: 75%;
-}
+
+
+
+
 .content .buttons {
   width: 100%;
   margin: 30px 0px;
@@ -161,6 +140,7 @@ a .terms {
   width: 30%;
   margin: 0px 1.5%;
 }
+
 .content .buttons button i {
   padding-right: 7px;
 }
@@ -170,7 +150,112 @@ a .terms {
   display: block;
   clear: both;
 }
-.content .already {
-  text-align: center;
-  font-size: 0.9rem;
+
+@media screen and (max-width: 420px) {
+
+  a {
+    color: #fff
+  }
+  
+  
+  .content:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background-color: black;
+    background-image: url("https://st4.depositphotos.com/2812261/20623/i/450/depositphotos_206233782-stock-photo-panoramic-view-malaga-port-promenade.jpg");
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: fit-content;
+    background-color:rgba(255, 234, 234, 0.5);
+    margin: auto auto;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 10px black;
+    -webkit-box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px black;
+    text-align: center;
+  }
+  .content .title {
+    text-align: center;
+    font-size: 2.0rem;
+    font-weight: 600;
+    padding-bottom: 30px;
+  }
+  .content input {
+    width: 100px;
+    font-size: 1.2rem;
+    font-family: "Open Sans";
+    border: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  .content input[type=checkbox] {
+    display: none;
+  }
+ 
+  .content input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    color: Black;
+    text-align: center;
+    line-height: 20px;
+  }
+ 
+  .content [type=submit] {
+    width: 50%;
+    font-size: 1.1rem;
+    margin: 20px 0px;
+    background-color: #cea3a0;
+    color: White;
+    border: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+
+  .content .buttons {
+    width: 50%;
+
+  }
+  .content .buttons button {
+    float: left;
+    width: 30%;
+  
+  }
+  .content .buttons button i {
+    padding-right: 7px;
+  }
+  
+  .content .buttons:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+ * {
+    width: 300px;
+  }
 }

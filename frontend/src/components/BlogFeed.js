@@ -2,12 +2,14 @@ import React, { useEffect,useState} from 'react'
 import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom';
+import moment from 'moment' 
 
 import '../Style/BlogFeed.css'
 
 
 
-const url = 'http://localhost:8080/blog'
+const url = 'https://final-project-by-tuliany.herokuapp.com/blog'
+        
 
 export const BlogFeed = () => {
     const history = useHistory()
@@ -39,14 +41,12 @@ useEffect(() => {
 
         {post&&
           post.map((blog) => ( 
-          <Link to={`/blog/${blog._id}`}>     
+          // <Link to={`/blog/${blog._id}`}>     
           <div className="blog-summary">
           <h10 dangerouslySetInnerHTML= {{ __html: blog.content }}></h10>
-         
-          {/* <div class="fb-like" data-href="https://final-project-by-tuliany.herokuapp.com/blog" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"/>
-          <div class="fb-comments" data-href="https://final-project-by-tuliany.herokuapp.com/blog" data-numposts="5" data-width="" /> */}
+          {/* <h15>{moment(createdAt).fromNow()}</h15> */}
           </div>
-         </Link>
+        //  </Link>
           ))} 
         </div>
         </div>

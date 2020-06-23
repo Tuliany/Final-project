@@ -6,9 +6,9 @@ export const Footer =()=> {
 
     <footer class="grid">
     <div class="branding">
-      <h11>The Company</h11>
+      <h11>W club official</h11>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-       <p>Copyright &copy; 2018 The Company</p>
+       <p>Copyright &copy; 2020 W club official</p>
     </div>
     
     <div class="social">
