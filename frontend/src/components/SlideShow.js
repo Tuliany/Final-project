@@ -1,5 +1,5 @@
 import React from "react";
-import '../Style/SlideShow.css'
+import '../Style/Slider.css'
 
 
 import HeroSlider, {
