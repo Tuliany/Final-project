@@ -23,7 +23,6 @@ const transport = {
 const transporter = nodemailer.createTransport(transport)
 
 
-
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/finalproject"
 mongoose.connect(mongoUrl, {
   useNewUrlParser: true,
@@ -155,7 +154,6 @@ app.post('/login', async (req, res) => {
   }
 })
 
- 
 app.put ('/reset', async (req, res) => {
   try{
     const { token, email, newPassword } = req.body
@@ -169,9 +167,6 @@ app.put ('/reset', async (req, res) => {
     res.status(400).json ({ err: err })
   }
 })
-
-
-
 
 app.post('/resetpassword', (req, res) => {
   if (req.body.email === ''){
@@ -215,8 +210,6 @@ app.post('/resetpassword', (req, res) => {
   })
 })
 
-
-
 app.get('/about', (req, res) => {
   res.send('About us')
 })
@@ -259,28 +252,6 @@ app.get('/blog', async (req, res) => {
 })
 
 
-app.get('/blog/:id', async (req, res) => {
-  const {
-    id
-  } = req.params
-  try {
-    const content = await Content.findById(id).populate({
-      path: 'createdBy',
-      select: 'userName'
-    })
-    res.json(content)
-  } catch (err) {
-    res.status(400).json({
-      message: 'oopsy!'
-    })
-  }
-})
-
-app.get('/admin', authenticateUser)
-app.get('/admin', (req, res) => {
-  res.send('Admin stuff')
-})
-
 app.get('/events', (req, res) => {
   res.send('Events ')
 })
@@ -316,3 +287,6 @@ app.post('/contact', (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`)
 })
+
+
+

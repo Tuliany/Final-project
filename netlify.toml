@@ -3,4 +3,4 @@ l# This file tells netlify where the code for this project is and
 [build]
   base = "frontend/"
   publish = "build/"
-  command = "npm run build"
+  command = “CI=false && npm run build”
