@@ -118,6 +118,28 @@ a {
   clear: both;
 }
 
+@keyframes blink { 50% { 
+  color: white;
+}  }
+
+h5{
+  border: 3px solid black;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  padding: 6px;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  min-width: 450px;
+  text-align:center ;
+  font-family: 'Raleway';
+  color: black;
+  font-size:20px;
+  background: linear-gradient(to right,#a2ccb6 0%,#fceeb5 0%,#cea3a0 100%);
+  animation: blink .55s step-end infinite alternate;
+}
+
 
 @media screen and (max-width: 750px) {
   a {

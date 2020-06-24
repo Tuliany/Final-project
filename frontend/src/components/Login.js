@@ -39,7 +39,7 @@ export const Login = () => {
           <button type="submit" onClick={handleLogin}> Login</button>
         <div class="already">Create an account? <a href="./signup">Sign up</a></div>
       </form>
-      <h3>{errorMessage && <p> {`${errorMessage} `}</p>}</h3>
+      <h3>{errorMessage && <h5> {`${errorMessage} `}</h5>}</h3>
     </div>
   )
 } 

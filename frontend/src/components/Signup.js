@@ -50,7 +50,7 @@ export const Signup = () => {
             <button type="submit" onClick={handleSignup}>Create Account</button>
       
       </form>
-    <h3>{signupError && <p> {`${signupError}`}</p>}</h3>
+    <h3>{signupError && <h5> {`${signupError}`}</h5>}</h3>
   </div>
   )
 }
