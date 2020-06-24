@@ -1,3 +1,4 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
 a {
   text-decoration: none;
@@ -13,10 +14,7 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   background: black;
   height: 100px;
-  /* position: fixed;
-  bottom: 10%; */
- 
-  /* grid-auto-columns: minmax(min-content, auto); */
+  width: 100%;
   align-items: center;
   justify-items: center;
   font-size: 12px !important;
@@ -49,9 +47,9 @@ a:hover {
 }
 
 @media (max-width: 450px) {
-  .social{
+  /* .social{
     display:none;
-  }
+  } */
   .contact{
     display:none;
   }

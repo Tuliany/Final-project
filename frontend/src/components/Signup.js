@@ -46,7 +46,7 @@ export const Signup = () => {
             value={password} onChange={event => setPassword(event.target.value)}/>
             
             <input type="checkbox" id="rememberMe"/>
-            <label for="rememberMe"></label><span>I have read and agree to the <a className="terms" href="#">Terms of Use </a>and <a href="#">Privacy Policy</a></span>
+              <label for="rememberMe"></label><span>I have read and agree to the <a className="terms" href="/">Terms of Use </a>and <a href="/">Privacy Policy</a></span>
             <button type="submit" onClick={handleSignup}>Create Account</button>
       
       </form>

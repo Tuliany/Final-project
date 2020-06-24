@@ -9,7 +9,6 @@ export const Login = () => {
    const dispatch = useDispatch()
    const accessToken = useSelector((store) => store.user.login.accessToken)
    const errorMessage = useSelector((store) => store.user.login.errorMessage)
-
    const [name, setName] = useState('')
    const [password, setPassword] = useState('')
    

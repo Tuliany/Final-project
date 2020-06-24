@@ -3,9 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, NavLink } from 'react-router-dom';
 
 import { Nav, NavDropdown } from "react-bootstrap";
-
 import { logout } from '../reducers/user'
-
 import '../Style/NavigationTool.css'
 
 
@@ -72,8 +70,7 @@ export const NavigationTool = () => {
            <Nav.Link href='/contact'>Contact us</Nav.Link>
          </li>
          <li>
-         <Nav.Link  onClick={handleLogout} href='/'>Logout</Nav.Link>
-           
+         <Nav.Link  onClick={handleLogout} href='/'>Logout</Nav.Link>  
          </li>
        </ul>
       }

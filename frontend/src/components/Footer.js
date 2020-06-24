@@ -3,7 +3,6 @@ import '../Style/Footer.css'
 
 export const Footer =()=> {
   return (
-
     <footer class="grid">
     <div class="branding">
       <h11>W club official</h11>

@@ -3,8 +3,9 @@
 
 .about-pic {
   height: 50%;
+  width: 50%;
   position: fixed;
-  left: 50%;
+  left: 45%;
   border-style: solid;
   border-width: 5px;
   border-color: #C5964B;
@@ -62,6 +63,7 @@
 .image-container{
 display:none;
 }
+
 .about-container{
   color: white;
   height: fit-content;
@@ -74,6 +76,7 @@ display:none;
   border-right-width: 5px;
   border-right-color:Black;
 }
+
 .title-container {
   position: absolute;
   top: 5%;
@@ -99,6 +102,7 @@ footer.grid{
     border-right-width: 5px;
     border-right-color:Black;
   }
+  
   .title-container {
     position: absolute;
     top: 5%;

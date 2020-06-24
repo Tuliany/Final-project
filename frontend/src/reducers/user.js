@@ -8,7 +8,6 @@ const initialState = {
     signupErrorMessage: null,
     userName: null,
     isAuthorized: false,
-    // userId: ''
   }
 }
 
@@ -26,13 +25,7 @@ export const user = createSlice({
       console.log(`User name: ${userName}`)
       state.login.userName = userName
     },
-    //   setUserId: (state, action) => {
-    //   const { userId } = action.payload
-    //   console.log(`User Id: ${userId}`)
-    //   state.login.userId = action.payload
-    // } ,
       autorized: (state) => {
-      // console.log(`Authorized: ${autorized}`)
       state.isAuthorized = true
     },
       setErrorMessage: (state, action) => {
@@ -69,10 +62,8 @@ export const login = (name, password) => {
     })
      .then((json)=> {
        console.log(json.accessToken)
-
        dispatch(user.actions.setAccessToken({ accessToken: json.accessToken }))
        dispatch(user.actions.setUserName({ userName: name }))
-       
       })
      .catch((err) => {
        dispatch(user.actions.setErrorMessage({ errorMessage: err }))
@@ -100,7 +91,6 @@ export const signup = (name, email, password) =>{
     .then((json) => {
       dispatch(user.actions.setAccessToken({accessToken: json.accessToken}))
       dispatch(user.actions.setUserName({ userName: name }))
-      // dispatch(user.action.setUserId(userId))
       })
         .catch((err) => {
           dispatch(user.actions.setSignupErrorMessage({signupErrorMessage: err}))

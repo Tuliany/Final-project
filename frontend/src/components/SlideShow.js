@@ -6,7 +6,7 @@ import HeroSlider, {
   Slide,
   OverlayContainer,
   AutoplayButton
-} from "hero-slider";
+} from "hero-slider"
 
 
 // Images
@@ -54,7 +54,6 @@ export const SlideShow = () => {
         background={{
           backgroundImage: Growth,
           backgroundAnimation: "zoom",
-          // maskBackgroundBlendMode: 'luminosity',	
         }}
       />
 
@@ -88,10 +87,9 @@ export const SlideShow = () => {
           backgroundAnimation: "zoom"
         }}
       />
-
     </HeroSlider>
-  );
-};
+  )
+}
 
 
 

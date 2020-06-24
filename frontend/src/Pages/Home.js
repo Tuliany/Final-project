@@ -7,6 +7,5 @@ export const Home = () => {
     <div>
       <SlideShow />
     </div>
-    
   )
 }

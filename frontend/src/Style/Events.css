@@ -34,9 +34,8 @@ body{
 .timer-title {
     position: relative;
     font-weight: bolder;
-    /* padding: 10px;
-    margin: 50px; */
 }
+
 .timer div:first-child{
     text-align: center;
 }
@@ -44,20 +43,20 @@ body{
 .h16{
     font-weight: 900%;
     margin-bottom: 0.5em;
-    /* position: fixed; */
-    
-    left: 35%;
-  
+    left: 35%; 
 }
+
 .timer div:first-child p {
     color: #f8f8f8;
     font-weight: bolder;
     font-size: 18px;
 }
+
 section{
     font-weight: 900%;
     font-size: 18px;
 }
+
 .timer div:last-child {
     border:1px solid white;
     display: grid;
@@ -68,9 +67,12 @@ section{
     position: absolute;
     top: 10%;
 }
- section p:first-child .timer div:last-child span {
+
+section p:first-child .timer div:last-child span {
      font-size: 3em;
  }
+
+
  @media screen and (max-width:480px){
      .timer div:last-child{
         margin-left: 2em; 
@@ -78,14 +80,12 @@ section{
         padding:3em, 1em
      }
      .h2{
-        /* position: fixed; */
         top: 10%;
         left: 10%;
      }
      .footer-grid{
          display:none;
-     }
-
+     } 
  }
 
  @media screen and (max-width: 750px) {

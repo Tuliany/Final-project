@@ -2,55 +2,57 @@ h1 {
   position: absolute;
   top:0%;
 }
+
 h3{
- color: black;
+ color: white;
 }
+
 .blog._id{
   color: white;
 }
 
 body {
-  background: #e5ded8;
   box-sizing: border-box;
   margin-bottom: 40px;
 }
 
 .blog-container {
-  background: #fff;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
   font-family: "adelle-sans", sans-serif;
   font-weight: 100;
   margin-bottom: 48px;
-  width: 20rem;
+  width: 100% auto;
   position: relative;
-  left: 10%;
+  left: 5%;
   right: 10%;
   padding: 100px;
   margin-right: 100px;
 }
+
 @media screen and (max-width: 480px) {
   .blog-container {
     width: 28rem;
   }
-  .img{
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  .blog-container {
-    width: 40rem;
-  }
-  .img{
-    display: none;
-  }
- 
   
-}
-@media screen and (min-width: 959px) {
-  .blog-container {
-    width: 50rem;
+  .img{
+    display: none;
   }
+}
+
+@media screen and (max-width: 767px) {
+  /* .blog-container {
+    width: 40rem;
+  } */
+  .img{
+    display: none;
+  } 
+}
+
+@media screen and (min-width: 959px) {
+  /* .blog-container {
+    width: 50rem;
+  } */
 }
 
 .blog-body {
