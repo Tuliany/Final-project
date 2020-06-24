@@ -26,7 +26,6 @@ useEffect(() => {
           post.map((blog) => ( 
           <div className="blog-summary">
           <h10 dangerouslySetInnerHTML= {{ __html: blog.content }}></h10>
-          {/* <h15>{moment(createdAt).fromNow()}</h15> */}
           </div>
           ))} 
         </div>
