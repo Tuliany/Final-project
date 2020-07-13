@@ -20,6 +20,7 @@
   height: 50%;
   position: fixed;
   left: 50%;
+  object-fit: contain;
 }
 
 .underline2 {

@@ -71,7 +71,7 @@ a {
   border-radius: 4px;
 }
 
-.content input[type=checkbox] {
+/* .content input[type=checkbox] {
   display: none;
 }
 
@@ -82,7 +82,7 @@ a {
   color: Black;
   text-align: center;
   line-height: 20px;
-}
+} */
 
 .content [type=submit] {
   width: 100%;

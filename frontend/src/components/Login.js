@@ -37,7 +37,7 @@ export const Login = () => {
           <input type="password" placeholder="Password"required 
             value={password} onChange={event => setPassword(event.target.value)}/>  
           <button type="submit" onClick={handleLogin}> Login</button>
-        <div class="already">Create an account? <a href="./signup">Sign up</a></div>
+        <div class="already">Create an account? <a className="terms" href="/signup">Sign up</a></div>
       </form>
       <h3>{errorMessage && <h5> {`${errorMessage} `}</h5>}</h3>
     </div>
