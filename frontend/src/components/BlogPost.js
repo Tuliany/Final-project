@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { Editor } from '@tinymce/tinymce-react'
 
+
 export const BlogPost = (props) => {
   const history = useHistory()
   const [blogContent, setBlogContent] = useState('')
