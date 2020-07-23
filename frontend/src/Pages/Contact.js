@@ -10,7 +10,7 @@ export const Contact = () => {
   
   const handleSubmit=(e)=> {
     e.preventDefault()
-    fetch('http://localhost:8080/contact', {
+    fetch('https://final-project-by-tuliany.herokuapp.com/contact', {
         method: "POST",
         body: JSON.stringify({name, email, message}),
         headers: {
