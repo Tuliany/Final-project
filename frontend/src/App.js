@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from "react-redux";
 
  import { user } from './reducers/user.js'
- import { remove } from './reducers/remove.js'
+
  import { configureStore, combineReducers } from "@reduxjs/toolkit";
  import { CSSTransition,SwitchTransition } from 'react-transition-group'
 
@@ -23,7 +23,7 @@ import { Footer } from 'components/Footer'
 import  {NavigationTool} from 'components/NavigationTool'
 
 
-const reducer = combineReducers({ user: user.reducer, remove: remove.reducer })
+const reducer = combineReducers({ user: user.reducer })
 
 const store = configureStore({ reducer })
 
